@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>面试题1 | 荒芜人烟，岁月静好</title><meta name="description" content="[html]页面导入样式时，使用link和@import有什么区别区别如下：  link是html标签，@import是css提供的 link引入的样式页面加载时同时加载，@import引入的样式需等页面加载完成后再加载。 link没有兼容性，@import不兼容ie5以下 link可以通过js操作DOM动态引入样式改变样式，而@import不可以  引申： css引入方式：行内样式，嵌入样式，链"><meta name="author" content="左国梁"><meta name="copyright" content="左国梁"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/2020/08/22/%E9%9D%A2%E8%AF%95%E9%A2%981/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="面试题1"><meta property="og:url" content="http://yoursite.com/2020/08/22/%E9%9D%A2%E8%AF%95%E9%A2%981/"><meta property="og:site_name" content="荒芜人烟，岁月静好"><meta property="og:description" content="[html]页面导入样式时，使用link和@import有什么区别区别如下：  link是html标签，@import是css提供的 link引入的样式页面加载时同时加载，@import引入的样式需等页面加载完成后再加载。 link没有兼容性，@import不兼容ie5以下 link可以通过js操作DOM动态引入样式改变样式，而@import不可以  引申： css引入方式：行内样式，嵌入样式，链"><meta property="og:image" content="https://i.loli.net/2020/05/01/IuWi8QbHvzjlOPw.jpg"><meta property="article:published_time" content="2020-08-22T15:24:44.000Z"><meta property="article:modified_time" content="2020-08-22T15:28:05.651Z"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.0.2',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime: '',
+  last_push_date: '天前',
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+      const now = new Date()
+      const expiryDay = ttl * 86400000
+      const item = {
+        value: value,
+        expiry: now.getTime() + expiryDay,
+      }
+      localStorage.setItem(key, JSON.stringify(item))
+    },
+  
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2020-08-22 23:28:05'
+}</script><noscript><style type="text/css">
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var autoChangeMode = 'false'
+var t = saveToLocal.get('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (saveToLocal.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><meta name="generator" content="Hexo 5.0.2"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">2</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">1</div></a></div></div></div><hr/></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#html-%E9%A1%B5%E9%9D%A2%E5%AF%BC%E5%85%A5%E6%A0%B7%E5%BC%8F%E6%97%B6%EF%BC%8C%E4%BD%BF%E7%94%A8link%E5%92%8C-import%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="toc-number">1.</span> <span class="toc-text">[html]页面导入样式时，使用link和@import有什么区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css-%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E5%92%8C%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E5%8C%BA%E5%88%AB"><span class="toc-number">2.</span> <span class="toc-text">[css]圣杯布局和双飞翼布局的理解和区别</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80"><span class="toc-number">2.0.1.</span> <span class="toc-text">圣杯布局</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80"><span class="toc-number">2.0.2.</span> <span class="toc-text">双飞翼布局</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text"></span></a></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://i.loli.net/2020/05/01/IuWi8QbHvzjlOPw.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">荒芜人烟，岁月静好</a></span><span class="menus"><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">面试题1</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-22T15:24:44.000Z" title="发表于 2020-08-22 23:24:44">2020-08-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-22T15:28:05.651Z" title="更新于 2020-08-22 23:28:05">2020-08-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%AF%8F%E6%97%A5%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E7%BB%83%E4%B9%A0/">每日前端面试题练习</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h3 id="html-页面导入样式时，使用link和-import有什么区别"><a href="#html-页面导入样式时，使用link和-import有什么区别" class="headerlink" title="[html]页面导入样式时，使用link和@import有什么区别"></a>[html]页面导入样式时，使用link和@import有什么区别</h3><p>区别如下：</p>
+<ol>
+<li>link是html标签，@import是css提供的</li>
+<li>link引入的样式页面加载时同时加载，@import引入的样式需等页面加载完成后再加载。</li>
+<li>link没有兼容性，@import不兼容ie5以下</li>
+<li>link可以通过js操作DOM动态引入样式改变样式，而@import不可以</li>
+</ol>
+<p>引申：</p>
+<p>css引入方式：行内样式，嵌入样式，链接样式，导入样式</p>
+<h3 id="css-圣杯布局和双飞翼布局的理解和区别"><a href="#css-圣杯布局和双飞翼布局的理解和区别" class="headerlink" title="[css]圣杯布局和双飞翼布局的理解和区别"></a>[css]圣杯布局和双飞翼布局的理解和区别</h3><h5 id="圣杯布局"><a href="#圣杯布局" class="headerlink" title="圣杯布局"></a>圣杯布局</h5><p>思路：先给中间div设置左右padding，然后给所有子标签浮动，中间子标签设置全宽度，左右子标签设置margin-left值使得三个标签位于同一高度，为了防止覆盖中间子标签<br>设置相对定位，给定left和right值填充左右边框</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">  &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;hd&quot;&gt;header&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;bd&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;middle&quot;&gt;middle&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;left&quot;&gt;left&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;right&quot;&gt;right&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;footer&quot;&gt;footer&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">  .hd &#123;</span><br><span class="line">    height: 50px;</span><br><span class="line">    background: #666;</span><br><span class="line">    text-align: center;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .bd &#123;</span><br><span class="line">    padding: 0 200px 0 180px;</span><br><span class="line">    height: 100px;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .middle &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background: blue;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .left &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    width: 180px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    margin-left: -100%;</span><br><span class="line">    background: #00cc99;</span><br><span class="line">    position: relative;</span><br><span class="line"></span><br><span class="line">    left: -180px;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .right &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    margin-left: -200px;</span><br><span class="line">    background: #00cc99;</span><br><span class="line">    position: relative;</span><br><span class="line">    right: -200px;</span><br><span class="line">  &#125;</span><br><span class="line">  .footer &#123;</span><br><span class="line">    height: 50px;</span><br><span class="line">    background: #666;</span><br><span class="line">    text-align: center;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="双飞翼布局"><a href="#双飞翼布局" class="headerlink" title="双飞翼布局"></a>双飞翼布局</h5><p>思路：给中间标签的子中间标签再设置一个子标签，在该子标签设置左右外边距，给左右子标签留出位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">  &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;div class&#x3D;&quot;hd&quot;&gt;header&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;middle&quot;&gt;&lt;div class&#x3D;&quot;inside&quot;&gt;middle&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;left&quot;&gt;left&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;right&quot;&gt;right&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;footer&quot;&gt;footer&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">  .hd &#123;</span><br><span class="line">    height: 50px;</span><br><span class="line">    background: #666;</span><br><span class="line">    text-align: center;</span><br><span class="line">  &#125;</span><br><span class="line">  .middle &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background: blue;</span><br><span class="line">  &#125;</span><br><span class="line">  .left &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    width: 180px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    margin-left: -100%;</span><br><span class="line">    background: #0c9;</span><br><span class="line">  &#125;</span><br><span class="line">  .right &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    margin-left: -200px;</span><br><span class="line">    background: #0c9;</span><br><span class="line">  &#125;</span><br><span class="line">  .footer &#123;</span><br><span class="line">    clear: both;</span><br><span class="line">    height: 50px;</span><br><span class="line">    background: #666;</span><br><span class="line">    text-align: center;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>相同点：圣杯布局和双飞翼布局都是解决左右定宽，中间自适应的三栏布局。并且中间栏优先渲染。</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">左国梁</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/08/22/%E9%9D%A2%E8%AF%95%E9%A2%981/">http://yoursite.com/2020/08/22/%E9%9D%A2%E8%AF%95%E9%A2%981/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com" target="_blank">荒芜人烟，岁月静好</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/IuWi8QbHvzjlOPw.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2020/08/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"><img class="next-cover" data-lazy-src="https://i.loli.net/2020/05/01/IuWi8QbHvzjlOPw.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">我的第一篇博客</div></div></a></div></nav></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By 左国梁</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
